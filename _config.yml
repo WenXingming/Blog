@@ -1,10 +1,10 @@
 # Site settings
 title: WenXingming Blog
 SEOTitle: WenXingming 的博客 | WenXingming Blog
-header-img: img/home-bg.jpg
+header-img: ./img/Home_background_picture.jpg
 email: 2801650811@qq.com
-description: "这里是 @wxm 的个人博客，与你一起发现更大的世界 | 要做一个有 “实力” 的程序员"
-keyword: "wxm, WenXingming, WenXingming Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
+description: "这里是 @wxm 的个人博客，与你一起发现更大的世界 | 要做一个普通人, 先安顿自己, 再帮助别人"
+keyword: "wxm, WenXingming, Blog, 博客, 个人网站, 互联网, Web"
 url: "https://wenxingming.github.io/" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -74,8 +74,8 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta"
-sidebar-avatar: ./img/15ff56bba63059a87294ebbf5bf525d7_4825019391002931370.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "要做一个普通人, 先安顿自己, 再帮助别人 <br> School & major @ Xidian University, CS"
+sidebar-avatar: ./img/self.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
