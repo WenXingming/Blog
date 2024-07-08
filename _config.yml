@@ -74,7 +74,7 @@ ga_domain: huangxuan.me
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "要做一个普通人, 先安顿自己, 再帮助别人 <br> School & major @ Xidian University, CS"
-sidebar-avatar: ./img/self.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: "{{ site.baseurl }}/img/self.jpg" # use absolute URL, seeing it's used in both `/` and `/about/`; 我没有使用绝对路径，而是基于baseurl的路径
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
