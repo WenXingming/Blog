@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll-博客环境搭建流程"
+title: "Jekyll-Windows下博客环境搭建流程"
 # subtitle: "难度：Easy"
 date: 2024-07-10 19:52:00
 author: "WenXingming"
@@ -14,13 +14,13 @@ tags:
 
 # 1、安装 Ruby 环境
 
-**Ruby 是一门开源的动态编程语言**。Jekyll 是基于 Ruby 开发的，因此首先需要安装 Ruby 环境：[Ruby 环境安装](https://www.runoob.com/ruby/ruby-environment.html)。注意，安装时所有的勾都要选上（默认），特别是加入Ruby到环境变量这一选项。
+**Ruby 是一门开源的动态编程语言**。Jekyll 是基于 Ruby 开发的，因此首先需要安装 Ruby 环境：[Ruby 环境安装](https://www.runoob.com/ruby/ruby-environment.html)，注意，安装时所有的勾都要选上（默认），特别是加入Ruby到环境变量这一选项。
 
-## 安装 RubyGems（修改软件源）
+## 1.1 安装 RubyGems（修改软件源）
 
-**RubyGems是 Ruby 的一个包管理器**。这类似于 Ubuntu 下的 apt-get，Centos 的 yum，Python 的 pip。RubyGems 大约创建于2003年11月，从**Ruby 1.9版起成为Ruby标准库的一部分**，安装完 Ruby 后可以通过命令 gem -v 查看 gem。
+**RubyGems是 Ruby 的一个包管理器**。这类似于 Ubuntu 下的 apt-get，Centos 的 yum，Python 的 pip。RubyGems 大约创建于2003年11月，从**Ruby 1.9版起成为Ruby标准库的一部分**（无需再手动安装），安装完 Ruby 后可以通过命令 `gem -v` 查看 gem。
 
-由于国内网络原因（你懂的），导致 gem 很难做啊，现在教你一招：[RubyGems 介绍及修改软件源](https://www.runoob.com/ruby/ruby-rubygems.html)；或者直接通过以下命令：
+**修改 RubyGems 的软件源**：由于国内网络原因（你懂的），导致 gem 很难做啊，现在教你一招：[RubyGems 介绍及修改软件源](https://www.runoob.com/ruby/ruby-rubygems.html)；或者直接通过以下命令：
 ```bash
 gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
 # 查看软件源
@@ -37,7 +37,7 @@ gem install jekyll
 jekyll -v
 ```
 
-## 安装jekyll-paginate【可选】
+## 2.1 安装jekyll-paginate【如果后续安装bundler，这里就不需手动安装。可选】
 
 jekyll-paginate是一个用于分页的插件。在博客或者新闻网站中，文章或帖子的数量可能非常庞大，将它们全部显示在一个页面上会导致加载时间过长，影响用户体验。jekyll-paginate插件允许开发者将帖子分布在多个页面上，每页显示固定数量的帖子。
 
@@ -47,7 +47,9 @@ gem install jekyll-paginate
 gem list --local
 ```
 
-# 3、安装、使用 Bundler
+# 3、安装、使用 Bundler【额外】
+
+上面两步其实已经足够了，但**为了方便管理项目的依赖，而不是手动通过 gem install 安装一个项目所需的许多个依赖**，我们需要 bundler。
 
 Bundler 是一个用于**管理 Ruby 项目中 gem（包）依赖的工具**，它可以确保在不同机器和环境中，项目依赖的 gem 版本保持一致，从而避免因版本不一致而导致的问题。总的来说，Bundler 是 Ruby 项目依赖管理的关键工具，它通过提供一致的运行环境，**简化了 gem（包）的安装和管理过程**。
 
@@ -56,16 +58,18 @@ gem install bundler
 # 查看 bundler
 bundle -v
 ```
-通过在**项目根目录下编写 Gemfile**，指定项目的 gem 依赖需求。在项目路径下执行命令 bundle install 即会使用自动使用 RubyGems 安装所需的所有依赖。Install all of the required gems from your specified sources:
+
+**bundle 的使用**：后续通过在**项目根目录下编写 Gemfile**，指定项目的 gem 依赖需求。在项目路径下执行命令 bundle install 即会使用自动使用 RubyGems 安装项目所需的所有依赖：
 
 ```bash
 bundle install
 git add Gemfile Gemfile.lock
 ```
-# 4、启动！
+
+# 4、xx，启动！
 
 ```bash
-# 执行 bundle install 安装依赖
+# 执行 bundle install 安装项目文件 Gemfile 中指定的所有项目所需的 gem 依赖
 bundle install
 # 启动网站服务
 jekyll serve 
