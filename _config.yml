@@ -1,3 +1,5 @@
+# Jekyll settings to tell jeckyll how to build your site
+
 # Site settings
 title: WenXingming Blog
 SEOTitle: WenXingming 的博客 | WenXingming Blog
@@ -11,22 +13,17 @@ baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 # Publish posts or collection documents with a future date.
 future: true
 
-# SNS-Links settings
-RSS: true
-# weibo_username: huxpro
-# zhihu_username: huxpro
+# SNS-Links settings, 见 /_includes/sns-links.html
+RSS: false
 github_username: WenXingming
 bilibili_username: 436373208 # bilibili ID
-# twitter_username: huxpro
-#facebook_username:  huxpro
-#linkedin_username:  firstname-lastname-idxxxx
+# weibo_username: huxpro
 
 # Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-highlighter: rouge
-permalink: pretty
-paginate: 10
-exclude:
+highlighter: rouge # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+permalink: pretty # URL style: :year/:month/:day/:title.html(md)
+paginate: 10  # paginate to 10 posts per page
+exclude: # files to exclude when building the site
   [
     "less",
     "node_modules",
@@ -36,8 +33,7 @@ exclude:
     "README.zh.md",
   ]
 anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
-# If you have timezone issue (e.g. #68) in China, uncomment to use this:
-#timezone: CN
+timezone: CN # If you have timezone issue (e.g. #68) in China, uncomment to use this
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
@@ -74,13 +70,13 @@ netease_comment: false
 # ga_domain: huangxuan.me
 
 # Sidebar settings
-sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个普通人, 先安顿自己, 再帮助别人 <br> School & major @ Xidian University, CS"
+sidebar: true   # whether or not using Sidebar.
+sidebar-about-description: "做一个普通人, 先安顿自己, 再帮助别人 <br> School&major @ Xidian University, Computer Science"
 sidebar-avatar: /img/self.jpg # use absolute URL, seeing it's used in both `/` and `/about/`; 我没有使用绝对路径，更改了文件 short-about.html
 
 # Featured Tags
-featured-tags: true # whether or not using Feature-Tags
-featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
+featured-tags: true         # whether or not using Feature-Tags
+featured-condition-size: 10  # A tag will be featured if the size of it is more than this condition value
 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
