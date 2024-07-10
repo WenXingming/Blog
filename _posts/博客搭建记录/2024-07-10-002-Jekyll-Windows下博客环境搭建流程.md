@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll-Windows下博客环境搭建流程"
+title: "2、Jekyll-Windows下博客本地环境搭建流程"
 # subtitle: "难度：Easy"
 date: 2024-07-10 19:52:00
 author: "WenXingming"
@@ -9,8 +9,10 @@ catalog: true
 # header-img: "img/post-bg-2015.jpg"
 # header-style: text
 tags:
-  - 杂乱记录
+  - 博客搭建记录
 ---
+
+在 “Github Pages：博客搭建流程记录” 中，已经搭建了我们自己的博客。但是每一次构建项目，都需要借助 Git 推送到 Github 帮助我们构建并在网站上发布。针对 Github 构建项目太慢，以及我们缺少一种本地化构建博客的方法来帮助我们进行可视化调试项目等问题，写此文章，本地搭建 jekyll 环境。
 
 # 1、安装 Ruby 环境
 
