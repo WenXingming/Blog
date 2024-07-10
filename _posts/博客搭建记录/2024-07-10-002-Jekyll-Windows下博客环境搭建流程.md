@@ -39,7 +39,7 @@ gem install jekyll
 jekyll -v
 ```
 
-## 2.1 安装jekyll-paginate【如果后续安装bundler，这里就不需手动安装。可选】
+## 2.1 安装 jekyll-paginate（如果后续安装bundler，这里就不需手动安装。可选）
 
 jekyll-paginate是一个用于分页的插件。在博客或者新闻网站中，文章或帖子的数量可能非常庞大，将它们全部显示在一个页面上会导致加载时间过长，影响用户体验。jekyll-paginate插件允许开发者将帖子分布在多个页面上，每页显示固定数量的帖子。
 
@@ -49,7 +49,7 @@ gem install jekyll-paginate
 gem list --local
 ```
 
-# 3、安装、使用 Bundler【额外】
+# 3、安装、使用 Bundler（额外）
 
 上面两步其实已经足够了，但**为了方便管理项目的依赖，而不是手动通过 gem install 安装一个项目所需的许多个依赖**，我们需要 bundler。
 
