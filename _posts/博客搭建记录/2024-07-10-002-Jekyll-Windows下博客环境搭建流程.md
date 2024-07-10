@@ -75,6 +75,7 @@ bundle install
 bundle install # 不用每次都执行，应当是第一次运行项目时，执行一次即可
 # 启动网站服务
 jekyll serve 
+# 访问地址：http://127.0.0.1:4000/ 或 localhost:4000
 # bundle exec jekyll serve # 使用 bundle exec 可以确保 Jekyll 使用的是 Gemfile 中指定的 gem 版本，而不是全局安装的版本
 ```
 
