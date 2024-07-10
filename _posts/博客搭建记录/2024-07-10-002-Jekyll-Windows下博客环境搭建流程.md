@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2、Jekyll-Windows下博客本地环境搭建流程"
+title: "2、Jekyll：Windows下博客本地环境搭建流程"
 # subtitle: "难度：Easy"
 date: 2024-07-10 19:52:00
 author: "WenXingming"
@@ -31,7 +31,7 @@ gem sources -l
 
 # 2、安装 Jekyll
 
-Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档（如 Markdown），通过一个转换器和我们的 Liquid 渲染器转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，完全免费。
+**Jekyll 是一个简单的博客形态的静态站点生产机器**。它有一个模版目录，其中包含原始文本格式的文档（如 Markdown），通过一个转换器和我们的 Liquid 渲染器转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，完全免费。
 
 ```bash
 gem install jekyll
@@ -53,7 +53,7 @@ gem list --local
 
 上面两步其实已经足够了，但**为了方便管理项目的依赖，而不是手动通过 gem install 安装一个项目所需的许多个依赖**，我们需要 bundler。
 
-Bundler 是一个用于**管理 Ruby 项目中 gem（包）依赖的工具**，它可以确保在不同机器和环境中，项目依赖的 gem 版本保持一致，从而避免因版本不一致而导致的问题。总的来说，Bundler 是 Ruby 项目依赖管理的关键工具，它通过提供一致的运行环境，**简化了 gem（包）的安装和管理过程**。
+**Bundler 是一个用于管理 Ruby 项目中 gem（包）依赖的工具**，它可以确保在不同机器和环境中，项目依赖的 gem 版本保持一致，从而避免因版本不一致而导致的问题。总的来说，Bundler 是 Ruby 项目依赖管理的关键工具，它通过提供一致的运行环境，**简化了 gem（包）的安装和管理过程**。
 
 ```bash
 gem install bundler
@@ -61,18 +61,18 @@ gem install bundler
 bundle -v
 ```
 
-**bundle 的使用**：后续通过在**项目根目录下编写 Gemfile**，指定项目的 gem 依赖需求。在项目路径下执行命令 bundle install 即会使用自动使用 RubyGems 安装项目所需的所有依赖：
+**bundle 的使用**：后续通过在**项目根目录下编写 Gemfile**，指定项目的 gem 依赖需求。在项目路径下执行命令 `bundle install` 即会使用自动使用 RubyGems 安装项目所需的所有依赖：
 
 ```bash
 bundle install
-git add Gemfile Gemfile.lock
+# git add Gemfile Gemfile.lock
 ```
 
 # 4、xx，启动！
 
 ```bash
 # 执行 bundle install 安装项目文件 Gemfile 中指定的所有项目所需的 gem 依赖
-bundle install
+bundle install # 不用每次都执行，应当是第一次运行项目时，执行一次即可
 # 启动网站服务
 jekyll serve 
 # bundle exec jekyll serve # 使用 bundle exec 可以确保 Jekyll 使用的是 Gemfile 中指定的 gem 版本，而不是全局安装的版本
