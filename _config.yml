@@ -33,7 +33,8 @@ exclude: # files to exclude when building the site
     "README.zh.md",
   ]
 anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
-timezone: Asia/Shanghai # If you have timezone issue (e.g. #68) in China. 使用这个需要安装 gem 'tzinfo'、gem 'tzinfo-data'，可以通过修改 Gemfile，再执行bundle install
+timezone: Asia/Shanghai # If you have timezone issue (e.g. #68) in China. 
+# 使用这个需要安装 gem 'tzinfo'、gem 'tzinfo-data'，可以通过修改 Gemfile，再执行bundle install, 但这种方式不知为何安装不上; 最后还是通过手动 gem install xxx
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
