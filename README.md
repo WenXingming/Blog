@@ -8,8 +8,8 @@
 
 
 # User Manual
-- [EN](Manual-zh.md)
-- [中文手册，废用](_doc/Manual-en.md)
+- [EN](_doc/Manual-en.md)
+- [中文手册，废用](_doc/Manual-zh.md)
 
 --------------------------------------------------
 
