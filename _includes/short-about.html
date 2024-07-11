@@ -7,33 +7,84 @@
     {% if site.sidebar-avatar %}
     <img src="{{baseurl}}/img/self.jpg" />
     {% endif %}
+
     <!--姓名-->
     {% if site.name %}
     <h4>{{site.name}}</h4>
     {% endif %}
 
+    <!--学校、专业-->
+    {% if site.school-major %}
+    <p>{{site.school-major}}</p>
+    {% endif %}
+
+    <!--格言描述-->
     {% if site.sidebar-about-description %}
     <p>{{site.sidebar-about-description}}</p>
     {% endif %}
 
-    <!-- <br> -->
+    <!-- 设置图标样式-->
+    <!-- font-awesome 图标库CDN, changed by WenXingming-->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.css" rel="stylesheet" type="text/css">
+    <style>
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      .contact-list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .contact-list li i {
+        width: 20px;
+        /* Set a fixed width for icons */
+        margin-right: 10px;
+        text-align: center;
+        /* Center the icon within its width */
+      }
+    </style>
+
+    <!--图标和信息-->
+    <ul class="contact-list">
+      <li>
+        <i class="fas fa-map-marker-alt fa-lg"></i>
+        <span>
+          <a href="https://maps.google.com/?q={{site.hometown}}" target="_blank">{{site.hometown}}</a>
+        </span>
+      </li>
+      <li>
+        <i class="fas fa-blog fa-lg"></i>
+        <span>
+          <a href="{{site.blog_url}}" target="_blank">Blog</a>
+        </span>
+      </li>
+      <li>
+        <i class="fas fa-envelope fa-lg"></i>
+        <span>
+          <a href="mailto:{{site.email}}">Email: {{site.email}}</a>
+        </span>
+      </li>
+      <li>
+        <i class="fab fa-github fa-lg"></i>
+        <span>
+          <a href="{{site.github_url}}" target="_blank">Github</a>
+        </span>
+      </li>
+      <li>
+        <i class="fas fa-graduation-cap fa-lg"></i>
+        <span>
+          <a href="{{site.google_scholar_url}}" target="_blank">Google Scholar</a>
+        </span>
+      </li>
+    </ul>
+
+
     <!-- SNS Link -->
+    <hr>
     {% include sns-links.html %}
-    <!--学校-->
-
-    <!--邮箱-->
-    <div style="margin-left: 3px;">
-      {% if site.email %}
-      <i class="fa-solid fa-envelope fa-lg"></i>
-      <span>Email: <a href="mailto:{{site.email}}">{{site.email}}</a></span>
-      {% endif %}
-    </div>
-
-    <!--位置-->
-    {% if site.hometown %}
-    <i class="fa-solid fa-location-dot"></i>
-    <span>Hometown: {{site.location}}</span>
-    {% endif %}
-
   </div>
 </section>

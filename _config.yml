@@ -4,10 +4,15 @@
 title: WenXingming Blog
 SEOTitle: WenXingming 的博客 | WenXingming Blog
 header-img: img/home-bg.png
-name: xingming wen
+# 个人介绍信息
+name: Xingming Wen
+school-major: School&major @ Xidian University, Computer Science
 hometown: 信阳, 河南
 email: 2801650811@qq.com
 blog: "https://wenxingming.github.io/"
+github_url: "https://https://github.com/WenXingming"
+google_scholar_url: "./img/404-bg.png" # 暂时没有Google
+
 description: "这里是 @wxm 的个人博客，与你一起发现更大的世界 | 要做一个普通人, 先安顿自己, 再帮助别人"
 keyword: "wxm, WenXingming, Blog, 博客, 个人网站, 互联网, Web"
 url: "https://wenxingming.github.io/" # your host, for absolute URL
@@ -74,7 +79,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true   # whether or not using Sidebar.
-sidebar-about-description: "做一个普通人, 先安顿自己, 再帮助别人 <br> School&major @ Xidian University, Computer Science"
+sidebar-about-description: "做一个普通人，先安顿自己，再帮助别人"
 sidebar-avatar: /img/self.jpg # use absolute URL, seeing it's used in both `/` and `/about/`; 我没有使用绝对路径，更改了文件 short-about.html
 
 # Featured Tags
