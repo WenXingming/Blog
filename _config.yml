@@ -64,7 +64,7 @@ kramdown:
       start_line: 1
 
 # # Disqus settings, Disqus 评论系统
-disqus_username: hux
+disqus_username: xingmingwen
 
 # Netease settings. 网易云跟帖已倒闭...
 netease_comment: false
