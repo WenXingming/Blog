@@ -7,6 +7,7 @@
 @media (min-width: 768px) {
   .post-container {
     padding-right: 5%;
+
   }
 }
 .sidebar-container {
@@ -137,13 +138,13 @@
   }
 }
 /*
-  Please note this CSS is currently in   prototype form. We'll implement a cleaned up version in Web Starter Kit.
+  Please note this CSS is currently in prototype form. We'll implement a cleaned up version in Web Starter Kit.
 */
 .paper-snackbar {
   transition-property: opacity, bottom, left, right, width, margin, border-radius;
   transition-duration: 0.5s;
   transition-timing-function: ease;
-  /*font-family: RobotoDraft;*/
+  /* font-family: RobotoDraft; */
   font-size: 14px;
   min-height: 14px;
   background-color: #323232;
