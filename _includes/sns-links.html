@@ -22,7 +22,12 @@
   {% if site.github_username %}
   <li>
     <a target="_blank" href="https://github.com/{{ site.github_username }}">
-      <i class="fa-brands fa-github fa-2xl"></i>
+      <!-- <i class="fa-brands fa-github fa-2xl"></i> -->
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      
     </a>
   </li>
   {% endif %}
@@ -30,7 +35,11 @@
   {% if site.bilibili_username %}
   <li>
     <a target="_blank" href="https://space.bilibili.com/{{ site.bilibili_username }}">
-      <i class="fa-brands fa-bilibili fa-2xl" style="color: #74C0FC;"></i>
+      <!-- <i class="fa-brands fa-bilibili fa-2xl" style="color: #74C0FC;"></i> -->
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa-brands fa-bilibili fa-stack-1x fa-inverse"></i>
+      </span>
     </a>
   </li>
   {% endif %}

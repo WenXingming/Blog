@@ -1,17 +1,39 @@
-<!-- About 的侧边栏 -->
+<!-- 侧边栏中的 About me，简短介绍 -->
 <section class="visible-md visible-lg">
   <hr>
   <h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
   <div class="short-about">
+    <!--头像-->
     {% if site.sidebar-avatar %}
-    <img src="{{baseurl}}/img/self.jpg"/>
+    <img src="{{baseurl}}/img/self.jpg" />
+    {% endif %}
+    <!--姓名-->
+    {% if site.name %}
+    <h4>{{site.name}}</h4>
     {% endif %}
 
     {% if site.sidebar-about-description %}
     <p>{{site.sidebar-about-description}}</p>
     {% endif %}
 
+    <!-- <br> -->
     <!-- SNS Link -->
     {% include sns-links.html %}
+    <!--学校-->
+
+    <!--邮箱-->
+    <div style="margin-left: 3px;">
+      {% if site.email %}
+      <i class="fa-solid fa-envelope fa-lg"></i>
+      <span>Email: <a href="mailto:{{site.email}}">{{site.email}}</a></span>
+      {% endif %}
+    </div>
+
+    <!--位置-->
+    {% if site.hometown %}
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Hometown: {{site.location}}</span>
+    {% endif %}
+
   </div>
 </section>
