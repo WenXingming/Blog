@@ -23,6 +23,7 @@
                         <li>
                             <a href="{{ site.baseurl }}/">Home</a>
                         </li>
+                        <!-- 动态导航链接：通过遍历site.pages集合，并为每个页面创建一个列表项（<li>）和链接（<a>），除非页面被标记为在导航中隐藏。这允许自动更新导航栏以反映网站结构的变化。 -->
                         {% for page in site.pages %}
                         {% if page.title and page.hide-in-nav != true %}
                         <li>
@@ -30,6 +31,7 @@
                         </li>
                         {% endif %}
                         {% endfor %}
+                        <!-- 搜索图标：在导航链接列表的末尾，有一个用于搜索的图标按钮，这个按钮使用JavaScript进行了事件绑定，但具体的搜索功能实现并未在这段代码中展示。 -->
                         <li class="search-icon">
                             <a href="javascript:void(0)">
                                 <i class="fa fa-search"></i>
@@ -43,6 +45,7 @@
         <!-- /.container -->
     </nav>
 
+    <!-- 通过JavaScript实现了一个自定义的、响应式的导航栏，具有平滑的开关动画，并且能够在用户点击导航栏外部时自动关闭，提升了用户体验 -->
     <script>
         // Drop Bootstarp low-performance Navbar
         // Use customize navbar with high-quality material design animation

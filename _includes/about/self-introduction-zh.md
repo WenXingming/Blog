@@ -16,6 +16,8 @@ Hey，我是 WenXingming，现在是一名 CS（Computer Science and Technology�
 
 #### 关注文章
 - [「正式确诊为“淡人”，网友：累了，我只想淡淡地活着……」][1] · 中国日报双语新闻 · 2024-03-21
+- [「WAWA鱼曲折的大学四年回忆录」][2] · 一位同学对大学四年生活的回忆和碎碎念 · 2024-07-07
+
 
 <!-- - [React Labs: What We've Been Working On – June 2022][12] · React Blog
 - [React Without Memo][11] · [React Conf 2021](https://conf.reactjs.org/)
@@ -43,7 +45,7 @@ Hey，我是 WenXingming，现在是一名 CS（Computer Science and Technology�
 
 
 [1]: https://mp.weixin.qq.com/s/CZ0RPk3CDjRHn6jfhCwioA
-[2]: //huangxuan.me/2015/12/28/css-sucks-2015/
+[2]: https://blog.csdn.net/qq_51282224/article/details/140232112
 [3]: //huangxuan.me/2016/06/05/pwa-in-my-pov/
 [4]: //huangxuan.me/2016/10/20/pwa-qcon2016/
 [5]: //huangxuan.me/2016/11/20/sw-101-gdgdf/

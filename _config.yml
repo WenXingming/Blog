@@ -63,10 +63,10 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-# # Disqus settings
-# disqus_username: hux
+# # Disqus settings, Disqus 评论系统
+disqus_username: hux
 
-# Netease settings
+# Netease settings. 网易云跟帖已倒闭...
 netease_comment: false
 
 # Analytics settings
