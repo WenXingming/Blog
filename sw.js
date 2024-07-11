@@ -20,7 +20,8 @@ const PRECACHE_LIST = [
   "./js/hux-blog.min.js",
   "./js/snackbar.js",
   "./img/icon_wechat.png",
-  "./img/avatar-hux.jpg",
+  // "./img/avatar-hux.jpg", 似乎无用了，由下面我的图片self代替了...
+  "./img/self.jpg",
   "./img/home-bg.png",
   "./img/404-bg.png",
   "./css/hux-blog.min.css",
