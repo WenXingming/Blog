@@ -1,15 +1,84 @@
+<!-- About 的侧边栏 -->
+
 <section class="visible-md visible-lg">
   <hr>
   <h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
   <div class="short-about">
     {% if site.sidebar-avatar %}
-    <!-- <img src="{{site.sidebar-avatar}}" /> -->
-    <img src="../img/self.jpg" />       <!-- 更改 img src by wxm -->
+    <img src="{{baseurl}}/img/self.jpg"/>
     {% endif %}
+
     {% if site.sidebar-about-description %}
     <p>{{site.sidebar-about-description}}</p>
     {% endif %}
+
     <!-- SNS Link -->
     {% include sns-links.html %}
   </div>
 </section>
+
+<!-- <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侧边栏</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+        }
+        .sidebar img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        .sidebar h2 {
+            margin-top: 20px;
+        }
+        .sidebar p {
+            margin: 10px 0;
+        }
+        .sidebar .icon {
+            margin-right: 10px;
+        }
+        .sidebar .info {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="{{baseurl}}/img/self.jpg" alt="Profile Image">
+        <h2>卢科达</h2>
+        <p>中国科学技术大学</p>
+        <p>Stand higher, see further.</p>
+        <div class="info">
+            <span class="icon">📍</span>
+            <span>广东 深圳</span>
+        </div>
+        <div class="info">
+            <span class="icon">📝</span>
+            <span>博客</span>
+        </div>
+        <div class="info">
+            <span class="icon">✉️</span>
+            <span>Email</span>
+        </div>
+        <div class="info">
+            <span class="icon">🐱</span>
+            <span>Github</span>
+        </div>
+        <div class="info">
+            <span class="icon">🎓</span>
+            <span>Google Scholar</span>
+        </div>
+    </div>
+</body>
+</html> -->
