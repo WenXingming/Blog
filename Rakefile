@@ -52,5 +52,5 @@ task :post do
   end
 end # task :post
 
-# #Load custom rake scripts
+# #Load custom rake scripts in: _rake/*.rake
 # Dir['_rake/*.rake'].each { |r| load r }
