@@ -16,9 +16,10 @@ jobs:
 
 # 安装环境：https://github.com/actions/runner-images/blob/ubuntu22/20240708.1/images/ubuntu/Ubuntu2204-Readme.md 可以看到已经有了 Ruby 和 RubyGems
     - name: 安装 gem 依赖
-      run: gem install jekyll bundler 
-      run: bundle install 
-# 利用 bundler 安装 Gemfile 中的依赖
+      run: |
+        gem install jekyll bundler
+        bundle install 
+      # 利用 bundler 安装 Gemfile 中的依赖
     - name: 构建项目
       run: jekyll build # 生成静态文件
  
