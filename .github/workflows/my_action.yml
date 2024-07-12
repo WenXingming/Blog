@@ -21,7 +21,6 @@ jobs:
         gem install tzinfo
         gem install tzinfo-data
         gem install bundler
-        bundle install
 
     - name: 构建项目
       run: jekyll build # 生成静态文件
