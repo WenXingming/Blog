@@ -10,4 +10,6 @@ catalog: true
 tags: [Github]
 ---
 
-# 使用 Github Actions 的流程
+# 编写 yml 文件
+
+# 发布到 pages
