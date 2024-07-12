@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Github Pages的使用"
-subtitle: "Github repository 的 build&development 方式：Actions 和 Develop from a branch"
+title: "Github Actions 的使用"
+subtitle: "使用 Github Actions 的流程"
 date: 2024-07-12 21:20:39
 author: "WenXingming"
 published: true
@@ -10,4 +10,4 @@ catalog: true
 tags: [Github]
 ---
 
-# This is a test!
+# 使用 Github Actions 的流程
