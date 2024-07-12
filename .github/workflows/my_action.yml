@@ -24,7 +24,7 @@ jobs:
       run: bundle install
 
     - name: 构建项目
-      run: jekyll build
+      run: bundle exec jekyll build
 
     - name: 将结果发布到 GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
