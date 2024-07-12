@@ -16,10 +16,6 @@ jobs:
 
     - name: 安装 gem 依赖
       run: |
-        gem install jekyll-paginate
-        gem install tzinfo
-        gem install tzinfo-data
-        gem install bundler
         bundle install
 
     - name: 构建项目
