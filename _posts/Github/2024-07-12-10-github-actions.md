@@ -10,6 +10,11 @@ catalog: true
 tags: [Github]
 ---
 
+Github Actions 就相当于提供了一个「虚拟机」的环境，我们可以使用它，帮助我们在 Github 上直接进行代码的编译、测试、部署（到 Github Pages）等操作。
+
 # 编写 yml 文件
+
+
+
 
 # 发布到 pages
