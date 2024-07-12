@@ -15,8 +15,6 @@ jobs:
       uses: actions/checkout@v4
 
     - name: 安装 gem 依赖
-      run: |
-        bundle install
 
     - name: 构建项目
       run: jekyll build
