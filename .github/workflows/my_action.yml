@@ -23,25 +23,22 @@ jobs:
       run: jekyll build # 生成静态文件
  
     # https://docs.github.com/zh/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89-github-actions-%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%BF%9B%E8%A1%8C%E5%8F%91%E5%B8%83
-    # 上传静态文件，很多地方好像没有？
-    - name: Upload static pages（上传静态文件）
-      uses: actions/upload-pages-artifact
-      with:
-        path: _site  # 指定生成静态文件的目录, 通常是Jekyll这类静态站点生成器的默认输出目录
-    # 发布到 GitHub Pages
-    - name: Deploy to GitHub Pages（发布到 GitHub Pages）
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: _site
-      
-      # uses: peaceiris/actions-gh-pages@v3
-      # with:
-      #   personal_token: ${{ secrets.ACCESS_TOKEN }}
-      #   publish_dir: ./_site
 
-      # # uses: peaceiris/actions-gh-pages@v3
-      # uses: JamesIves/github-pages-deploy-action@3.5.9 #这里调用第三方依赖，用于上传代码到指定分支上
-      # with:
-      #   BRANCH: gh-pages # github pages 默认的分支
-      #   FOLDER: dist # 上传文件的目录，我这个目录在根目录下，如果是子目录可以这么写  docs/.vuepress/dist
+    # # 上传静态文件，很多地方好像没有？
+    # - name: Upload static pages（上传静态文件）
+    #   uses: actions/upload-pages-artifact
+    #   with:
+    #     path: _site  # 指定生成静态文件的目录, 通常是Jekyll这类静态站点生成器的默认输出目录
+    # # 发布到 GitHub Pages
+    # - name: Deploy to GitHub Pages（发布到 GitHub Pages）
+    #   uses: peaceiris/actions-gh-pages@v3
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     publish_dir: _site
+      
+      
+      - name: 将结果发布到 GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # 指定 GitHub Pages 分支
+          folder: _site  # 指定生成静态文件的目录
