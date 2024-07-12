@@ -19,7 +19,8 @@ jobs:
       run: |
         gem install jekyll bundler
         bundle install 
-      # 利用 bundler 安装 Gemfile 中的依赖
+
+    # 利用 bundler 安装 Gemfile 中的依赖 
     - name: 构建项目
       run: jekyll build # 生成静态文件
  
