@@ -1,11 +1,10 @@
-# 定义触发工作流程的条件：当有推送（push）操作发生在 master 分支时，相应的GitHub Actions工作流程将被触发
-name: Build and Deploy（定义Github Actions构建和发布的触发动作）
+name: 定义Github Actions构建和发布的触发动作(push代码、master)
 on:
   push:
     branches: [master]
 permissions:
   contents: write
-# 定义了一个名为build的作业，将在GitHub提供的最新Ubuntu虚拟环境中执行
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,8 +16,12 @@ jobs:
 # 安装环境：https://github.com/actions/runner-images/blob/ubuntu22/20240708.1/images/ubuntu/Ubuntu2204-Readme.md 可以看到已经有了 Ruby 和 RubyGems
     - name: 安装 gem 依赖
       run: |
-        gem install jekyll bundler
-        bundle install 
+        gem install jekyll
+        gem install jekyll-paginate
+        gem install tzinfo
+        gem install tzinfo-data
+        gem install bundler
+        bundle install
 
     - name: 构建项目
       run: jekyll build # 生成静态文件
@@ -36,7 +39,6 @@ jobs:
     #   with:
     #     github_token: ${{ secrets.GITHUB_TOKEN }}
     #     publish_dir: _site
-      
       
       - name: 将结果发布到 GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
