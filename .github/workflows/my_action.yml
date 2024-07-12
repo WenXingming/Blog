@@ -24,7 +24,7 @@ jobs:
       run: bundle install
 
     - name: 构建项目
-      run: bundle exec jekyll build
+      run: bundle exec jekyll build # 使用 bundler 安装所有依赖后，所有的命令应该通过 bundle exec 来运行，以确保它们从本地的 bundle 中执行，而不是全局环境
 
     - name: 将结果发布到 GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
