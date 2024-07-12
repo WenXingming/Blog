@@ -1,20 +1,33 @@
-name: Jekyll site CI
-
+# 定义触发工作流程的条件：当有推送（push）操作发生在 master 分支时，相应的GitHub Actions工作流程将被触发
+name: Build and Deploy（定义Github Actions构建和发布的触发动作）
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    branches:
+      - master
 
+# 定义了一个名为build的作业，将在GitHub提供的最新Ubuntu虚拟环境中执行
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: Checkout code（检出、读取 Github 仓库内容）
+      uses: actions/checkout@v4
+
+# 需要Node.js运行时环境来构建、测试或运行JavaScript项目
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies（1、安装依赖）
+      run: npm install
+
+    - name: Build project（2、构建项目）
+      run: npm run build
+
+    - name: Deploy to GitHub Pages（3、将结果发布到 Action（非经典的发布到分支））
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
