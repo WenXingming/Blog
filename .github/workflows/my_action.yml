@@ -23,14 +23,14 @@ jobs:
         gem install bundler
         bundle install
 
-    - name: 构建项目
-      run: jekyll build
+    # - name: 构建项目
+    #   run: jekyll build
 
-      - name: 将结果发布到 GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages  # 指定 GitHub Pages 分支
-        folder: _site  # 指定生成静态文件的目录
+    #   - name: 将结果发布到 GitHub Pages
+    #   uses: JamesIves/github-pages-deploy-action@v4
+    #   with:
+    #     branch: gh-pages  # 指定 GitHub Pages 分支
+    #     folder: _site  # 指定生成静态文件的目录
 
 
 
