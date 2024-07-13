@@ -8,6 +8,8 @@
 
 
 # User Manual
+
+forked from Huxpro/huxpro.github.io
 - [EN](_doc/Manual-en.md)
 - [中文手册，废用](_doc/Manual-zh.md)
 
