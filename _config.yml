@@ -31,7 +31,7 @@ bilibili_username: 436373208 # bilibili ID
 # Build settings
 highlighter: rouge # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 permalink: pretty # URL style: :year/:month/:day/:title.html(md)
-paginate: 5  # paginate to 5 posts per page
+paginate: 8  # paginate to 5 posts per page
 exclude: # files to exclude when building the site
   [
     "less",
