@@ -34,11 +34,3 @@ tags: [Github]给[官方手册](https://docs.github.com/zh/pages
 ----
 
 在我的个人博客中，使用的是 Jekyll 静态站点生成器，所以我可以创建一个 Github Page，并直接使用Github 默认执行的 Jekyll 构建过程来生成自己的静态博客站点，完全**不需要自定义 Github Actions**。在此过程中，如果还有什么需要更改的话，也就是设置一下 Github Pages 的发布源是 master分支，还是自己定义一个新的分支（一般命名为 gh-pages）专门存放构建生成的静态网站文件，然后 Github Pages 将使用这个新的分支的文件来发布网站。
-
-
-
-
-
-# 02 创建 Github Pages站点 2024-07-13 00:07:05
-
-创建仓库和设置为Github Pages站点：[创建Github Pages站点](https://docs.github.com/zh/pages/getting-started-with-github-pages/creating-a-github-pages-site)
