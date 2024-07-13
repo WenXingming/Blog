@@ -6,8 +6,8 @@ SEOTitle: WenXingming 的博客 | WenXingming Blog
 header-img: img/home-bg.png
 description: "这里是 @wxm 的个人博客，与你一起发现更大的世界 | 要做一个普通人, 先安顿自己, 再帮助别人"
 keyword: "wxm, WenXingming, Blog, 博客, 个人网站, 互联网, Web"
-url: "https://wenxingming.github.io/Blog" # your host, for absolute URL
-baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://wenxingming.github.io" # your host, for absolute URL
+baseurl: "/Blog" # for example, '/blog' if your blog hosted on 'host/blog'
 # 个人介绍信息
 name: Xingming Wen
 school-major: School&Major @ Xidian University, Computer Science
