@@ -1,0 +1,35 @@
+# 启用：放进 workflows 文件夹去，以启用 Github Action
+
+name: Build and Deploy
+
+on:
+  push:
+    branches: [master]
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 检出仓库内容 checkout
+      uses: actions/checkout@v4
+
+    - name: 设置 Ruby 环境
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+        bundler-cache: true
+
+    - name: 安装 gem 依赖环境
+      run: bundle install
+
+    - name: 构建项目
+      run: bundle exec jekyll build # 使用 bundler 安装所有依赖后，所有的命令应该通过 bundle exec 来运行，以确保它们从本地的 bundle 中执行，而不是全局环境
+
+    - name: 将结果保存到 gh-pages 分支
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages  # 指定 GitHub Pages 分支
+        folder: _site     # 指定生成静态文件的目录, jeckyll 默认静态文件生成在 _site 目录下

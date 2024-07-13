@@ -9,7 +9,7 @@
 
 # User Manual
 
-forked from Huxpro/huxpro.github.io
+forked from Huxpro/huxpro.github.io。布置到 /Blog 时出现了路径问题，思考：相对路径的使用？一个文件包含另一个使用相对路径的文件，那么相对路径不就找不到资源了...
 - [EN](_doc/Manual-en.md)
 - [中文手册，废用](_doc/Manual-zh.md)
 

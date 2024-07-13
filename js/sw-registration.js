@@ -31,11 +31,12 @@ function handleRegistration(registration){
   }
 }
 
-if(navigator.serviceWorker){
+if (navigator.serviceWorker) {
   // For security reasons, a service worker can only control the pages
   // that are in the same directory level or below it. That's why we put sw.js at ROOT level.
   navigator.serviceWorker
-    .register('../sw.js')
+    // 不能用相对路径，很多文件都包含其
+    .register('/Blog/sw.js')
     .then((registration) => handleRegistration(registration))
     .catch((error) => {console.log('ServiceWorker registration failed: ', error)})
 
