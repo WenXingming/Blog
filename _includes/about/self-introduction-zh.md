@@ -1,4 +1,4 @@
-Hello，我是 WenXingming，现在是一名 CS（Computer Science and Technology）专业的学生，同时对文学、心理学也很感兴趣。目前已从「ZhengZhou University」本科毕业，研究生就读于「XiDian University · 计算机科学与技术学院」，学习方向为计算机图形学（SLAM & 三维重建等）。
+Hello，我是 WenXingming，现在是一名计算机科学与技术专业（CS, Computer Science and Technology）专业的学生，同时对文学、心理学也很感兴趣。目前已从「ZhengZhou University」本科毕业，研究生就读于「XiDian University · 计算机科学与技术学院」，学习方向为计算机图形学（SLAM & 三维重建等）。
 
 
 
