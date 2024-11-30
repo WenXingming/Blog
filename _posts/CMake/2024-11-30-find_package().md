@@ -43,7 +43,6 @@ find_package(OpenCV 3 REQUIRED) # 寻找 Opencv库
 
 通过查找头文件和库文件，CMake确保项目能够正确编译和链接OpenCV库，从而使用其提供的功能进行计算机视觉相关的开发。
 
-----
 
 ## 示例
 
