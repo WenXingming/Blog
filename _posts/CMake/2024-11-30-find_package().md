@@ -18,7 +18,7 @@ tags: [CMake]
 find_package(OpenCV 3 REQUIRED) # 寻找 Opencv库
 ```
 
-***A***：这段代码是一个CMake指令，用于在C++项目中查找和配置OpenCV库。CMake是一个跨平台的构建系统，广泛用于管理项目的编译过程。具体来说，`find_package(OpenCV 3 REQUIRED)`指令告诉CMake查找OpenCV库的版本3，并将其配置到项目中。以下是这条指令的详细解释：
+***A***：这段代码是一个CMake指令，用于在C++项目中**查找和配置**OpenCV库。CMake是一个跨平台的构建系统，广泛用于管理项目的编译过程。具体来说，`find_package(OpenCV 3 REQUIRED)`指令告诉CMake查找OpenCV库的版本3，并将其配置到项目中。以下是这条指令的详细解释：
 
 - `find_package`是CMake的一个命令，用于查找外部库或包。
 - `OpenCV`是要查找的库的名称。在这种情况下，是OpenCV，一个流行的计算机视觉库。
@@ -26,8 +26,6 @@ find_package(OpenCV 3 REQUIRED) # 寻找 Opencv库
 - `REQUIRED`关键字表示这个库是必需的。如果CMake无法找到指定版本的OpenCV库，它将停止配置过程并报错。
 
 通过使用`find_package(OpenCV 3 REQUIRED)`，CMake会在系统中搜索OpenCV库，并设置相应的变量（如`OpenCV_INCLUDE_DIRS`和`OpenCV_LIBS`），以便在项目中使用这些变量来包含头文件和链接库文件。
-
-注释`# 寻找 Opencv库`进一步解释了这条指令的作用，即在项目中寻找并配置OpenCV库。
 
 总结来说，这段代码的作用是确保CMake能够找到并配置至少版本3的OpenCV库，使得项目能够使用OpenCV提供的功能进行计算机视觉相关的开发。如果未找到指定版本的OpenCV库，CMake将会报错并停止配置过程，从而提醒开发者安装或更新OpenCV库。
 
